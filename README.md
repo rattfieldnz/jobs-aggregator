@@ -16,7 +16,7 @@ which will combine listings from all feeds, then display them via the use of Bac
 to be sortable by: title, date posted, location, proximity to location, keywords, and the feed vendor - more will be added later on.
 I plan to use Bootstrap for front-end look-and-feel - I am not a designer by trade, so will be aiming for the 'simple is best' approach.
 
-I know the niche-market for such sites is over-saturated; however, this is more of a project to build upon my personal coding sexperience.
+I know the niche-market for such sites is over-saturated; however, this is more of a project to build upon my personal coding experience.
 
 ## <a name="contributing">Contributing</a>
 If anyone wants to contribute, by all means to so. To help make things easier for this, I request all contributions follow these steps 
