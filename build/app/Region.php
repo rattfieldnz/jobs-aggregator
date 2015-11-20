@@ -1,24 +1,35 @@
-<?php
-
-namespace App;
+<?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Region extends Model {
+/**
+ * Class Region
+ *
+ * The model class for a region.
+ *
+ * @package App
+ * @author Rob Attfield <emailme@robertattfield.com>
+ */
+class Region extends Model
+{
 
-	protected $table = 'region';
-	public $timestamps = true;
+    protected $table = 'region';
+    public $timestamps = true;
 
-	use SoftDeletes;
+    use SoftDeletes;
 
-	protected $dates = ['deleted_at'];
-	protected $fillable = array('name', 'meta_desc', 'long_desc');
-	protected $visible = array('name', 'meta_desc', 'long_desc');
+    protected $dates = ['deleted_at'];
+    protected $fillable = array('name', 'meta_desc', 'long_desc');
+    protected $visible = array('name', 'meta_desc', 'long_desc');
 
-	public function country()
-	{
-		return $this->belongsTo('App\Country', 'id');
-	}
-
+    /**
+     * This function retrieves the associated country for the current region.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function country()
+    {
+        return $this->belongsTo('App\Country', 'id');
+    }
 }
