@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * The model class for a category.
  *
  * @package App
- * @author Rob Attfield <emailme@robertattfield.com>
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
  */
 class Category extends Model
 {
@@ -20,8 +20,8 @@ class Category extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('name');
-    protected $visible = array('name');
+    protected $fillable = ['name'];
+    protected $visible = ['name'];
 
     /**
      * Get all of the countries that are assigned this category.

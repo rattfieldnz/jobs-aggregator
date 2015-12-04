@@ -8,6 +8,14 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
+/**
+ * Class User
+ *
+ * The model class which represents a user.
+ *
+ * @package App
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
+ */
 class User extends Model implements
     AuthenticatableContract,
     AuthorizableContract,

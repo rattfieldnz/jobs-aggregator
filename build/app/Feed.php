@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * The model class for a single feed.
  *
  * @package App
- * @author Rob Attfield <emailme@robertattfield.com>
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
  */
 class Feed extends Model
 {
@@ -20,8 +20,8 @@ class Feed extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('name', 'url', 'url_parameters', 'publisher_id');
-    protected $visible = array('name', 'url', 'url_parameters', 'publisher_id');
+    protected $fillable = ['name', 'url', 'url_parameters', 'publisher_id'];
+    protected $visible = ['name', 'url', 'url_parameters', 'publisher_id'];
 
     /**
      * This function gets the associated country for the current feed item.

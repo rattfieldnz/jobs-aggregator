@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * The model class for a region.
  *
  * @package App
- * @author Rob Attfield <emailme@robertattfield.com>
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
  */
 class Region extends Model
 {
@@ -20,8 +20,8 @@ class Region extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('name', 'meta_desc', 'long_desc');
-    protected $visible = array('name', 'meta_desc', 'long_desc');
+    protected $fillable = ['name', 'meta_desc', 'long_desc'];
+    protected $visible = ['name', 'meta_desc', 'long_desc'];
 
     /**
      * This function retrieves the associated country for the current region.
