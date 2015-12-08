@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * The model class for a locale/language.
  *
  * @package App
- * @author Rob Attfield <emailme@robertattfield.com>
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
  */
 class LocaleLanguage extends Model
 {
@@ -20,8 +20,8 @@ class LocaleLanguage extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('short_code', 'long_code', 'name');
-    protected $visible = array('short_code', 'long_code', 'name');
+    protected $fillable = ['short_code', 'long_code', 'name'];
+    protected $visible = ['short_code', 'long_code', 'name'];
 
     /**
      * Get all of the countries that are assigned this locale/language.
