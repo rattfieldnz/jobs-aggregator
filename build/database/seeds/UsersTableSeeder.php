@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 //use Laracasts\TestDummy\Factory as TestDummy;
 
+/**
+ * Class UsersTableSeeder
+ *
+ * A class used to seed the Users database table.
+ *
+ * @author Rob Attfield <emailme@robertattfield> <http://www.robertattfield.com>
+ */
 class UsersTableSeeder extends Seeder {
 
     public function run()
