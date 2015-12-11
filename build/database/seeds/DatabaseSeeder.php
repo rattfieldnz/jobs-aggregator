@@ -3,6 +3,13 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class DatabaseSeeder
+ *
+ * The main class used for database seeding.
+ *
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
+ */
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,6 +22,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(UsersTableSeeder::class);
+        $this->call(CountriesTableSeeder::class);
 
         Model::reguard();
     }
