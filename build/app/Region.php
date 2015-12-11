@@ -27,8 +27,8 @@ class Region extends Model
     ];
 
     protected $dates = ['deleted_at'];
-    protected $fillable = ['name', 'meta_desc', 'long_desc'];
-    protected $visible = ['name', 'meta_desc', 'long_desc'];
+    protected $fillable = ['name', 'country_id', 'meta_desc', 'long_desc'];
+    protected $visible = ['name', 'country_id', 'meta_desc', 'long_desc'];
 
     /**
      * This function retrieves the associated country for the current region.
