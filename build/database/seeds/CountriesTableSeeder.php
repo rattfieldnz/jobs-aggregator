@@ -15,9 +15,9 @@ class CountriesTableSeeder extends Seeder
 {
     public function run(){
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-        DB::table('countries')->truncate();
+        DB::table('country')->truncate();
 
-        DB::table('countries')->insert([
+        DB::table('country')->insert([
             [
                 'name' => "New Zealand",
                 'meta_desc' => "New Zealand is an island country in the southern Pacific Ocean. The country comprises two main landmasses – the North Island, South Island, and others.",
