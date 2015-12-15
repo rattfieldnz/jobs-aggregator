@@ -2,7 +2,16 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
+/**
+ * Class CreateLocaleLanguageTable
+ *
+ * A seeding class to create database schema
+ * for the 'locale_language' table.
+ *
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
+ */
 class CreateLocaleLanguageTable extends Migration {
 
 	public function up()

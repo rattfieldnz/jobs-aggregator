@@ -4,6 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+/**
+ * Class CreateCountryLocaleLanguageCategoryTable
+ *
+ * A seeding class to create database schema
+ * for the 'country_locale_language_category' table.
+ *
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
+ */
 class CreateCountryLocaleLanguageCategoryTable extends Migration {
 
 	public function up()
