@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,6 +19,12 @@ class Feed extends Model
     public $timestamps = true;
 
     use SoftDeletes;
+    use SluggableTrait;
+
+    protected $sluggable = [
+        'build_from' => 'name',
+        'save_to'    => 'slug',
+    ];
 
     protected $dates = ['deleted_at'];
     protected $fillable = ['name', 'url', 'url_parameters', 'publisher_id'];

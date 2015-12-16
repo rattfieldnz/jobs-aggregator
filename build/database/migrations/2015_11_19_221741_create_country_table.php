@@ -2,7 +2,16 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
+/**
+ * Class CreateCountryTable
+ *
+ * A seeding class to create database schema
+ * for the 'country' table.
+ *
+ * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
+ */
 class CreateCountryTable extends Migration {
 
 	public function up()

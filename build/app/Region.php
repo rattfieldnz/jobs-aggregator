@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,10 +19,16 @@ class Region extends Model
     public $timestamps = true;
 
     use SoftDeletes;
+    use SluggableTrait;
+
+    protected $sluggable = [
+        'build_from' => 'name',
+        'save_to'    => 'slug',
+    ];
 
     protected $dates = ['deleted_at'];
-    protected $fillable = ['name', 'meta_desc', 'long_desc'];
-    protected $visible = ['name', 'meta_desc', 'long_desc'];
+    protected $fillable = ['name', 'country_id', 'meta_desc', 'long_desc'];
+    protected $visible = ['name', 'country_id', 'meta_desc', 'long_desc'];
 
     /**
      * This function retrieves the associated country for the current region.

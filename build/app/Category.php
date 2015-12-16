@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,10 +19,16 @@ class Category extends Model
     public $timestamps = true;
 
     use SoftDeletes;
+    use SluggableTrait;
+
+    protected $sluggable = [
+        'build_from' => 'name',
+        'save_to'    => 'slug',
+    ];
 
     protected $dates = ['deleted_at'];
-    protected $fillable = ['name'];
-    protected $visible = ['name'];
+    protected $fillable = ['name', 'parent_category_id'];
+    protected $visible = ['name', 'parent_category_id'];
 
     /**
      * Get all of the countries that are assigned this category.
@@ -41,5 +48,15 @@ class Category extends Model
     public function localeLanguages()
     {
         return $this->morphedByMany('App\LocaleLanguage', 'country_locale_language_category');
+    }
+
+    /**
+     * Retrieve all subcategories of the current category.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function subCategories()
+    {
+        return $this->hasMany('App\Category', 'parent_category_id');
     }
 }
