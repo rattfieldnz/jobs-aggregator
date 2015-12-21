@@ -23,7 +23,7 @@ class LocaleLanguage extends Model implements SluggableInterface
     use SluggableTrait;
 
     protected $sluggable = [
-        'build_from' => 'name',
+        'build_from' => 'long_code',
         'save_to'    => 'slug',
     ];
 
