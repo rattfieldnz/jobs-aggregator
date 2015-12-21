@@ -1,20 +1,20 @@
 <?php
-
 use App\Country;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Class CountriesTableSeeder
+ * Class NewZealandCountry
  *
- * A class used to seed the Countries database table.
+ * A class used to seed New Zealand country details for the country database table.
  *
  * @author Rob Attfield <emailme@robertattfield> <http://www.robertattfield.com>
  */
-class CountriesTableSeeder extends Seeder
+class NewZealandCountry extends Seeder
 {
-    public function run(){
+    public function run()
+    {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         DB::table('country')->truncate();
 
@@ -31,5 +31,4 @@ class CountriesTableSeeder extends Seeder
 
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
-
 }

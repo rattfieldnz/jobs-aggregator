@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(UsersTableSeeder::class);
-        $this->call(CountriesTableSeeder::class);
-        $this->call(RegionsTableSeeder::class);
+        $this->call(NewZealandCountry::class);
+        $this->call(NewZealandRegions::class);
 
         Model::reguard();
     }

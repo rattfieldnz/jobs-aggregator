@@ -1,18 +1,17 @@
 <?php
-use App\Country;
 use App\Region;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Class RegionsTableSeeder
+ * Class NewZealandRegions
  *
- * A class used to seed the Regions database table.
+ * A class used to seed New Zealand regions for the Regions database table.
  *
  * @author Rob Attfield <emailme@robertattfield> <http://www.robertattfield.com>
  */
-class RegionsTableSeeder extends Seeder
+class NewZealandRegions extends Seeder
 {
     public function run(){
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
