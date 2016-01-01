@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(NewZealandCountry::class);
         $this->call(NewZealandRegions::class);
         $this->call(LocaleLanguages::class);
+        $this->call(Categories::class);
 
         Model::reguard();
     }
