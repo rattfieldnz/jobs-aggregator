@@ -2,7 +2,7 @@
 use App\Helpers\CategoryFunctions;
 
 /**
- * Class AutomotiveSubCategories
+ * Class AutomotiveCategories
  *
  * A trait used to seed Automotive sub-categories.
  *

@@ -2,7 +2,7 @@
 use App\Helpers\CategoryFunctions;
 
 /**
- * Class AccountingSubCategories
+ * Class AccountingCategories
  *
  * A trait used to seed Accounting sub-categories.
  *

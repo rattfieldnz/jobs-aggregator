@@ -2,7 +2,7 @@
 use App\Helpers\CategoryFunctions;
 
 /**
- * Class AgricultureFishingForestrySubCategories
+ * Class AgricultureFishingForestryCategories
  *
  * A trait used to seed Agriculture, Fishing, and Forestry sub-categories.
  *

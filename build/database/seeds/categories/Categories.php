@@ -19,6 +19,14 @@ class Categories extends Seeder
         AccountingCategories::create();
         AgricultureFishingForestryCategories::create();
         AutomotiveCategories::create();
+        BankingFinanceInsuranceCategories::create();
+        ConstructionArchitectureCategories::create();
+        CustomerServiceCategories::create();
+        EngineeringCategories::create();
+        ExecutiveGeneralManagementCategories::create();
+        GovernmentCouncilCategories::create();
+        HealthcareCategories::create();
+        HospitalityTourismCategories::create();
 
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
