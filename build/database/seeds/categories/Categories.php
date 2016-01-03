@@ -27,6 +27,13 @@ class Categories extends Seeder
         GovernmentCouncilCategories::create();
         HealthcareCategories::create();
         HospitalityTourismCategories::create();
+        HRAndRecruitmentCategories::create();
+        InformationTechnologyCategories::create();
+        LegalCategories::create();
+        ManufacturingOperationsCategories::create();
+        MarketingMediaCommunicationsCategories::create();
+        OfficeAdministrationCategories::create();
+        PropertyCategories::create();
 
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
