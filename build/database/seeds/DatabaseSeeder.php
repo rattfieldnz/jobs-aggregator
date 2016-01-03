@@ -22,7 +22,10 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(UsersTableSeeder::class);
-        $this->call(CountriesTableSeeder::class);
+        $this->call(NewZealandCountry::class);
+        $this->call(NewZealandRegions::class);
+        $this->call(LocaleLanguages::class);
+        $this->call(Categories::class);
 
         Model::reguard();
     }

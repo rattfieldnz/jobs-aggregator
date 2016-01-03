@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -12,7 +13,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @package App
  * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
  */
-class LocaleLanguage extends Model
+class LocaleLanguage extends Model implements SluggableInterface
 {
 
     protected $table = 'locale_language';
@@ -22,7 +23,7 @@ class LocaleLanguage extends Model
     use SluggableTrait;
 
     protected $sluggable = [
-        'build_from' => 'name',
+        'build_from' => 'long_code',
         'save_to'    => 'slug',
     ];
 

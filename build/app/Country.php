@@ -1,5 +1,6 @@
 <?php namespace App;
 
+use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -12,7 +13,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @package App
  * @author Rob Attfield <emailme@robertattfield.com> <http://www.robertattfield.com>
  */
-class Country extends Model
+class Country extends Model implements SluggableInterface
 {
 
     protected $table = 'country';

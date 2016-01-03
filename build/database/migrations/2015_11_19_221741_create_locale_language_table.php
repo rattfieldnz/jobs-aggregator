@@ -18,11 +18,11 @@ class CreateLocaleLanguageTable extends Migration {
 	{
 		Schema::create('locale_language', function(Blueprint $table) {
 			$table->increments('id');
+			$table->string('short_code', 2);
+			$table->string('long_code', 5)->unique();
+			$table->string('name', 50)->unique();
 			$table->timestamps();
 			$table->softDeletes();
-			$table->string('short_code', 2)->unique();
-			$table->string('long_code', 5);
-			$table->string('name', 50)->unique();
 		});
 	}
 
