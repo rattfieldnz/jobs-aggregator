@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LocaleLanguages::class);
         $this->call(Categories::class);
         $this->call(CountryLocaleLanguageCategorySeeder::class);
+        $this->call(FeedSeeder::class);
 
         Model::reguard();
     }
